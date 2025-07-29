@@ -1,0 +1,32 @@
+/* css/styles.css of text-title-effect */
+a {
+  position: relative;
+}
+
+a:focus:not(:hover):not(:active) {
+  outline: none;
+  color: red;
+}
+a:focus:not(:hover):not(:active):after {
+  display: block;
+}
+
+a:after {
+  content: "Go to " attr(href);
+  display: none;
+  min-width: 100px;
+  padding: 5px 10px;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+body {
+  max-width: 700px;
+  margin: 60px auto;
+  line-height: 1.5;
+}
